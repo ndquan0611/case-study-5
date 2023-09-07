@@ -1,0 +1,19 @@
+.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    padding: 0 15px;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    &:hover {
+        color: var(--primary);
+    }
+
+    &.active {
+        color: var(--primary);
+    }
+}

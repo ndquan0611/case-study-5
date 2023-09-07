@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 function ServiceUpdate() {
     return (
         <>
-            <h2 className={cx('title')}>Create service</h2>
+            <h2 className={cx('title')}>Update service</h2>
 
             <form>
                 <div className="mb-3">

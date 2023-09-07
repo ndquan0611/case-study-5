@@ -4,6 +4,7 @@ const routes = {
     employee: '/employee',
     service: '/service',
     serviceCreate: '/service/create',
+    serviceUpdate: '/service/update',
     contract: '/contract',
 };
 

@@ -7,6 +7,8 @@ import Service from '~/pages/Service';
 import Contract from '~/pages/Contract';
 import ServiceCreate from '~/pages/Service/ServiceCreate';
 import ServiceUpdate from '~/pages/Service/ServiceUpdate';
+import CustomerCreate from '~/pages/Customer/CustomerCreate';
+import CustomerUpdate from '~/pages/Customer/CustomerUpdate';
 
 const publicRoutes = [
     {
@@ -16,6 +18,14 @@ const publicRoutes = [
     {
         path: config.routes.customer,
         component: Customer,
+    },
+    {
+        path: config.routes.customerCreate,
+        component: CustomerCreate,
+    },
+    {
+        path: config.routes.customerUpdate,
+        component: CustomerUpdate,
     },
     {
         path: config.routes.employee,

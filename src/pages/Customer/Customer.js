@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
-import Card from '~/components/Card/Card';
 import Button from '~/components/Button';
 import config from '~/config';
 import styles from './Customer.module.scss';
@@ -72,18 +71,25 @@ function Customer() {
         <div className={cx('wrapper')}>
             <h2 className={cx('title')}>Customer categories</h2>
 
-            <table className="table mt-5">
+            <div>
+                <Button to={config.routes.customerCreate} primary small>
+                    Create
+                </Button>
+            </div>
+
+            <table className="table mt-4">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Họ tên</th>
-                        <th scope="col">Ngày sinh</th>
-                        <th scope="col">Giới tính</th>
-                        <th scope="col">Số CMND</th>
-                        <th scope="col">Số Điện Thoại</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Loại khách</th>
-                        <th scope="col">Địa chỉ</th>
+                        <th>#</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Số CMND</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Email</th>
+                        <th>Loại khách</th>
+                        <th>Địa chỉ</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -98,6 +104,9 @@ function Customer() {
                             <td>{item.email}</td>
                             <td>{item.type}</td>
                             <td>{item.address}</td>
+                            <td>
+                                <button className="btn btn-primary">Edit</button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

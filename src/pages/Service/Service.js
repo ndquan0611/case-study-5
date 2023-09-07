@@ -68,7 +68,7 @@ function Service() {
             <h2 className={cx('title')}>Service categories</h2>
 
             <div>
-                <Button to={config.routes.serviceCreate} primary>
+                <Button to={config.routes.serviceCreate} primary small>
                     Create
                 </Button>
             </div>

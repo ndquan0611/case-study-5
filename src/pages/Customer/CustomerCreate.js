@@ -17,31 +17,31 @@ function CustomerCreate() {
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Ngày sinh</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="usageArea" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="birthday" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Giới tính</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="rentalCost" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="gender" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Số CMND</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="maxGuest" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="cmnd" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Số điện thoại</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="rentalType" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="phone" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Email</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="otherConvenient" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="email" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Loại khách</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="imgURL" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="type" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Địa chỉ</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="imgURL" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="address" />
                 </div>
                 <Button to={config.routes.customer} outline small>
                     Close

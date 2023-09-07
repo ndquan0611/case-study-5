@@ -18,27 +18,27 @@ function ServiceUpdate() {
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Diện tích sử dụng</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="usageArea" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="usable_area" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Chi phí thuê</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="rentalCost" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="rental_cost" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Số lượng khách hàng</label>
-                    <input type="number" className={cx('form-control', 'custom-input')} name="maxGuest" />
+                    <input type="number" className={cx('form-control', 'custom-input')} name="max_guest" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Kiểu thuê</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="rentalType" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="type" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Dịch vụ đi kèm</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="otherConvenient" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="free_service" />
                 </div>
                 <div className="mb-3">
                     <label className={cx('form-label')}>Image URL</label>
-                    <input type="text" className={cx('form-control', 'custom-input')} name="imgURL" />
+                    <input type="text" className={cx('form-control', 'custom-input')} name="img" />
                 </div>
                 <Button to={config.routes.service} outline small>
                     Close

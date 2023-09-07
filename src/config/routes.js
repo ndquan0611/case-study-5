@@ -8,6 +8,7 @@ const routes = {
     serviceCreate: '/service/create',
     serviceUpdate: '/service/update',
     contract: '/contract',
+    contractCreate: '/contract/create',
 };
 
 export default routes;

@@ -9,6 +9,7 @@ import ServiceCreate from '~/pages/Service/ServiceCreate';
 import ServiceUpdate from '~/pages/Service/ServiceUpdate';
 import CustomerCreate from '~/pages/Customer/CustomerCreate';
 import CustomerUpdate from '~/pages/Customer/CustomerUpdate';
+import ContractCreate from '~/pages/Contract/ContractCreate';
 
 const publicRoutes = [
     {
@@ -46,6 +47,10 @@ const publicRoutes = [
     {
         path: config.routes.contract,
         component: Contract,
+    },
+    {
+        path: config.routes.contractCreate,
+        component: ContractCreate,
     },
 ];
 

@@ -8,6 +8,8 @@
     padding: 0 15px;
     font-size: 1.7rem;
     font-weight: 600;
+    color: var(--text-color);
+    transition: color ease-in-out 200ms;
 
     &:hover {
         color: var(--primary);

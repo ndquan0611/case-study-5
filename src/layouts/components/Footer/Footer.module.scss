@@ -1,14 +1,16 @@
 .wrapper {
+    height: var(--default-layout-header-height);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: var(--default-layout-header-height);
 }
 
 .text {
     font-size: 1.8rem;
     font-weight: 600;
+    color: var(--text-color);
     cursor: pointer;
+    transition: color ease-in-out 200ms;
 
     &:hover {
         color: var(--primary);

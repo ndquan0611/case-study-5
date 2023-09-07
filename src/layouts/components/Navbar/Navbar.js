@@ -11,8 +11,10 @@ function Navbar() {
     return (
         <nav className={cx('wrapper')}>
             <NavbarItem title="Home" to={config.routes.home} />
-            <NavbarItem title="Customer" to={config.routes.customer} />
+            <NavbarItem title="Service" to={config.routes.service} />
             <NavbarItem title="Employee" to={config.routes.employee} />
+            <NavbarItem title="Customer" to={config.routes.customer} />
+            <NavbarItem title="Contract" to={config.routes.contract} />
         </nav>
     );
 }

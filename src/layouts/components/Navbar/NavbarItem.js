@@ -15,7 +15,7 @@ function NavbarItem({ title, to }) {
             }
             to={to}
         >
-            <span>{title}</span>
+            <span className={cx('title')}>{title}</span>
         </NavLink>
     );
 }

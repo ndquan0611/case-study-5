@@ -2,7 +2,7 @@ const routes = {
     home: '/',
     customer: '/customer',
     customerCreate: '/customer/create',
-    customerUpdate: '/customer/update',
+    customerUpdate: '/customer/update/:id',
     employee: '/employee',
     service: '/service',
     serviceCreate: '/service/create',

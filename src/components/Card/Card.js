@@ -1,16 +1,30 @@
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import CardItem from './CardItem';
-import styles from './Card.module.scss';
+import * as serviceService from '~/services/serviceService';
 
+import styles from './Card.module.scss';
 const cx = classNames.bind(styles);
 
-function Card({ data }) {
+function Card() {
+    const [serviceList, setServiceList] = useState([]);
+
+    useEffect(() => {
+        const fetchApi = async () => {
+            const result = await serviceService.get();
+            setServiceList(result);
+        };
+        fetchApi();
+    }, []);
+
+    console.log(serviceList);
+
     return (
         <div className={cx('wrapper')}>
-            {data.map((item) => (
+            {/* {serviceList.map((item) => (
                 <CardItem key={item.id} data={item} />
-            ))}
+            ))} */}
         </div>
     );
 }

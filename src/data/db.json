@@ -1,0 +1,201 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "birthday": "1990-01-01",
+      "gender": "Nam",
+      "cmnd": "123456789",
+      "phone": "0987654321",
+      "email": "van.a@gmail.com",
+      "customerType": {
+        "id": 3,
+        "type": "Gold"
+      },
+      "address": "123 ABC, Tp. Hồ Chí Minh"
+    },
+    {
+      "name": "Lê Hoàng CDwewe",
+      "birthday": "1988-11-30",
+      "gender": "Nam",
+      "cmnd": "567894321",
+      "phone": "0912345678",
+      "email": "hoang.c@gmail.com",
+      "address": "789 MNL, Tp. Đà Nẵng",
+      "customerType": {
+        "id": 3,
+        "type": "Gold"
+      },
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Phạm Thanh D",
+      "birthday": "1995-09-08",
+      "gender": "Nữ",
+      "cmnd": "456732198",
+      "phone": "0876543210",
+      "email": "thanh.d@gmail.com",
+      "customerType": {
+        "id": 3,
+        "type": "Gold"
+      },
+      "address": "246 QWE, Tp. Đà Lạt"
+    },
+    {
+      "id": 4,
+      "name": "Trần Thị B",
+      "birthday": "1985-05-15",
+      "gender": "Nữ",
+      "cmnd": "987654321",
+      "phone": "0123456789",
+      "email": "thi.b@gmail.com",
+      "customerType": {
+        "id": 2,
+        "type": "Platinum"
+      },
+      "address": "456 XYZ, Tp. Hà Nội"
+    },
+    {
+      "id": 5,
+      "name": "Đỗ Tấn E",
+      "birthday": "1992-02-20",
+      "gender": "Nam",
+      "cmnd": "783219456",
+      "phone": "0654321098",
+      "email": "tan.e@gmail.com",
+      "customerType": {
+        "id": 4,
+        "type": "Silver"
+      },
+      "address": "985 UYT, Tp. Nha Trang"
+    },
+    {
+      "name": "qweqwe",
+      "birthDay": "",
+      "gender": "qwrwerew",
+      "cmnd": "qweqweq",
+      "phone": "wqeqwe",
+      "email": "qweqwe",
+      "address": "qweqwe",
+      "customerType": {
+        "id": 2,
+        "type": "Platinum"
+      },
+      "birthday": "qweqwe",
+      "id": 6
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "type": "Diamond"
+    },
+    {
+      "id": 2,
+      "type": "Platinum"
+    },
+    {
+      "id": 3,
+      "type": "Gold"
+    },
+    {
+      "id": 4,
+      "type": "Silver"
+    }
+  ],
+  "service": [
+    {
+      "id": 1,
+      "name": "Villa Paradise",
+      "usable_area": 300,
+      "rental_cost": 500,
+      "max_guest": 10,
+      "type": "theo ngày",
+      "free_service": "bể bơi riêng, xe đưa đón sân bay",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "House of Dreams",
+      "usable_area": 200,
+      "rental_cost": 300,
+      "max_guest": 8,
+      "type": "theo ngày",
+      "free_service": "wifi miễn phí, dịch vụ quản gia",
+      "img": ""
+    },
+    {
+      "id": 3,
+      "name": "Deluxe Room",
+      "usable_area": 25,
+      "rental_cost": 50,
+      "max_guest": 2,
+      "type": "theo đêm",
+      "free_service": "bữa sáng miễn phí, dịch vụ dọn phòng hàng ngày",
+      "img": ""
+    },
+    {
+      "id": 4,
+      "name": "Luxury Villa Riverside",
+      "usable_area": 400,
+      "rental_cost": 800,
+      "max_guest": 12,
+      "type": "theo ngày",
+      "free_service": "bến du thuyền riêng, dịch vụ đặt vé tham quan",
+      "img": ""
+    },
+    {
+      "id": 5,
+      "name": "Cozy Cottage",
+      "usable_area": 100,
+      "rental_cost": 200,
+      "max_guest": 4,
+      "type": "theo ngày",
+      "free_service": "bếp đầy đủ tiện nghi, dịch vụ giặt là",
+      "img": ""
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "code": "CT-01",
+      "customer": "Nguyễn Văn A",
+      "service": "Villa Paradise",
+      "begin_date": "2023-01-01",
+      "end_date": "2023-02-02",
+      "deposit": 300,
+      "total_money": 500
+    },
+    {
+      "id": 2,
+      "code": "CT-02",
+      "customer": "Trần Thị B",
+      "service": "Luxury Villa Riverside",
+      "begin_date": "2023-01-01",
+      "end_date": "2023-02-02",
+      "deposit": 300,
+      "total_money": 500
+    },
+    {
+      "id": 3,
+      "code": "CT-03",
+      "customer": "Phạm Thanh D",
+      "service": "Deluxe Room",
+      "begin_date": "2023-01-01",
+      "end_date": "2023-02-02",
+      "deposit": 300,
+      "total_money": 500
+    },
+    {
+      "id": 4,
+      "code": "CT-04",
+      "customer": "Đỗ Tấn E",
+      "service": "Cozy Cottage",
+      "begin_date": "2023-01-01",
+      "end_date": "2023-02-02",
+      "deposit": 300,
+      "total_money": 500
+    }
+  ]
+}

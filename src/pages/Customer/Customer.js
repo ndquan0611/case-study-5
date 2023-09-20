@@ -1,71 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
+import * as customerService from '~/services/customerService';
 import Button from '~/components/Button';
 import config from '~/config';
 import styles from './Customer.module.scss';
+import { Link } from 'react-router-dom';
+import RemoveModal from './RemoveModal';
 
 const cx = classNames.bind(styles);
 
-const customerData = [
-    {
-        id: 1,
-        name: 'Nguyễn Văn A',
-        birthday: '1990-01-01',
-        gender: 'Nam',
-        cmnd: '123456789',
-        phone: '0987654321',
-        email: 'van.a@gmail.com',
-        type: 'Diamond',
-        address: '123 ABC, Tp. Hồ Chí Minh',
-    },
-    {
-        id: 2,
-        name: 'Lê Hoàng C',
-        birthday: '1988-11-30',
-        gender: 'Nam',
-        cmnd: '567894321',
-        phone: '0912345678',
-        email: 'hoang.c@gmail.com',
-        type: 'Platinum',
-        address: '789 MNL, Tp. Đà Nẵng',
-    },
-    {
-        id: 3,
-        name: 'Phạm Thanh D',
-        birthday: '1995-09-08',
-        gender: 'Nữ',
-        cmnd: '456732198',
-        phone: '0876543210',
-        email: 'thanh.d@gmail.com',
-        type: 'Gold',
-        address: '246 QWE, Tp. Đà Lạt',
-    },
-    {
-        id: 4,
-        name: 'Trần Thị B',
-        birthday: '1985-05-15',
-        gender: 'Nữ',
-        cmnd: '987654321',
-        phone: '0123456789',
-        email: 'thi.b@gmail.com',
-        type: 'Silver',
-        address: '456 XYZ, Tp. Hà Nội',
-    },
-    {
-        id: 5,
-        name: 'Đỗ Tấn E',
-        birthday: '1992-02-20',
-        gender: 'Nam',
-        cmnd: '783219456',
-        phone: '0654321098',
-        email: 'tan.e@gmail.com',
-        type: 'Member',
-        address: '985 UYT, Tp. Nha Trang',
-    },
-];
-
 function Customer() {
-    const [customerList, setCustomerList] = useState(customerData);
+    const [idRemove, setIdRemove] = useState();
+    const [openModalRemove, setOpenModalRemove] = useState(false);
+    const [customerList, setCustomerList] = useState([]);
+
+    useEffect(() => {
+        const fetchApi = async () => {
+            const result = await customerService.get();
+            setCustomerList(result);
+        };
+        fetchApi();
+    }, []);
+
+    const handleCloseModalRemove = () => {
+        setOpenModalRemove(false);
+    };
+
+    const handleRemove = async () => {
+        await customerService.remove(idRemove);
+    };
+
+    const handleOpenModalRemove = () => {
+        setOpenModalRemove(true);
+    };
 
     return (
         <div className={cx('wrapper')}>
@@ -102,15 +69,33 @@ function Customer() {
                             <td>{item.cmnd}</td>
                             <td>{item.phone}</td>
                             <td>{item.email}</td>
-                            <td>{item.type}</td>
+                            <td>{item.customerType.type}</td>
                             <td>{item.address}</td>
                             <td>
-                                <button className="btn btn-primary">Edit</button>
+                                <Link to={`/customer/update/${item.id}`} className="btn btn-primary">
+                                    Edit
+                                </Link>
+                                <button
+                                    onClick={() => {
+                                        handleOpenModalRemove();
+                                        setIdRemove(item.id);
+                                    }}
+                                    className="btn btn-danger"
+                                >
+                                    Delete
+                                </button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            {openModalRemove && (
+                <RemoveModal
+                    openModal={openModalRemove}
+                    closeModal={handleCloseModalRemove}
+                    handleRemove={handleRemove}
+                />
+            )}
         </div>
     );
 }

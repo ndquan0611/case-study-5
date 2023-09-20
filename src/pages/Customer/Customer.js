@@ -5,13 +5,10 @@ import Button from '~/components/Button';
 import config from '~/config';
 import styles from './Customer.module.scss';
 import { Link } from 'react-router-dom';
-import RemoveModal from './RemoveModal';
 
 const cx = classNames.bind(styles);
 
 function Customer() {
-    const [idRemove, setIdRemove] = useState();
-    const [openModalRemove, setOpenModalRemove] = useState(false);
     const [customerList, setCustomerList] = useState([]);
 
     useEffect(() => {
@@ -22,16 +19,11 @@ function Customer() {
         fetchApi();
     }, []);
 
-    const handleCloseModalRemove = () => {
-        setOpenModalRemove(false);
-    };
-
-    const handleRemove = async () => {
-        await customerService.remove(idRemove);
-    };
-
-    const handleOpenModalRemove = () => {
-        setOpenModalRemove(true);
+    const handleDelete = async (id) => {
+        await customerService.remove(id);
+        if (customerList) {
+            setCustomerList(customerList.filter((item) => item.id !== id));
+        }
     };
 
     return (
@@ -75,13 +67,7 @@ function Customer() {
                                 <Link to={`/customer/update/${item.id}`} className="btn btn-primary">
                                     Edit
                                 </Link>
-                                <button
-                                    onClick={() => {
-                                        handleOpenModalRemove();
-                                        setIdRemove(item.id);
-                                    }}
-                                    className="btn btn-danger"
-                                >
+                                <button onClick={() => handleDelete(item.id)} className="btn btn-danger">
                                     Delete
                                 </button>
                             </td>
@@ -89,13 +75,6 @@ function Customer() {
                     ))}
                 </tbody>
             </table>
-            {openModalRemove && (
-                <RemoveModal
-                    openModal={openModalRemove}
-                    closeModal={handleCloseModalRemove}
-                    handleRemove={handleRemove}
-                />
-            )}
         </div>
     );
 }

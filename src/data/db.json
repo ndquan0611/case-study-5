@@ -69,21 +69,6 @@
         "type": "Silver"
       },
       "address": "985 UYT, Tp. Nha Trang"
-    },
-    {
-      "name": "qweqwe",
-      "birthDay": "",
-      "gender": "qwrwerew",
-      "cmnd": "qweqweq",
-      "phone": "wqeqwe",
-      "email": "qweqwe",
-      "address": "qweqwe",
-      "customerType": {
-        "id": 2,
-        "type": "Platinum"
-      },
-      "birthday": "qweqwe",
-      "id": 6
     }
   ],
   "customerType": [
